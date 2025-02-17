@@ -1,4 +1,4 @@
-# **BREEZE-Mapping Pipeline: Python Implementation**  
+# **BREEZE-Mapping Pipeline: a Standalone Python Implementation**  
 
 ## **Overview**  
 This repository provides an improved and fully portable implementation of the **BREEZE-mapping pipeline** for whole-brain structural and activity analysis in larval zebrafish, based on:
