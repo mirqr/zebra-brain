@@ -1,1 +1,18 @@
-# zebra-brain
+# **BREEZE-Mapping Pipeline: Python Implementation**  
+
+## **Overview**  
+This repository provides an improved and fully portable implementation of the **BREEZE-mapping pipeline** for whole-brain structural and activity analysis in larval zebrafish, based on:
+
+**Jin, Neelakantan, et al.** (2023) – *Brain Registration and Evaluation for Zebrafish (BREEZE)-mapping: A pipeline for whole-brain structural and activity analyses.* [STAR Protocols, DOI: 10.1016/j.xpro.2023.102647](https://doi.org/10.1016/j.xpro.2023.102647)  
+
+The original pipeline assumes access to high-performance computing (HPC) infrastructure with Slurm workload management, requiring proprietary (MATLAB) or root-level permissions to install dependencies.
+
+This implementation fully replaces the original Bash-based implementation with Python while ensuring that it remains lightweight, portable, and self-contained. It eliminates unnecessary dependencies and parallelization overhead, making it easier to run on any machine, including standard laptops.
+
+## Key Improvements
+
+
+- **Pure Python Implementation** – Replaced Bash scripts with Python for better readability, maintainability, and portability.  
+- **Simplified and Isolated Setup** - Single-command installation in an isolated Conda environment, avoiding software conflicts. **No Root** Access Required. **No proprietary dependencies** (e.g. MATLAB), replacing them with **equivalent Python code**.  
+- **Optimized Parallelization** – Identified **only the necessary parts** that require parallel execution, using Python subprocesses instead of Slurm.  
+- **Better Portability** – Runs on standard laptops to high-performance workstations
