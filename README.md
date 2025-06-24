@@ -7,7 +7,7 @@ This repository provides an improved and fully portable implementation of the **
 
 The original pipeline assumes access to high-performance computing (HPC) infrastructure with Slurm workload management, requiring proprietary (MATLAB) or root-level permissions to install dependencies.
 
-This implementation fully replaces the original Bash-based implementation with Python while ensuring that it remains lightweight, portable, and self-contained. It eliminates unnecessary dependencies and parallelization overhead, making it easier to run on any machine, including standard laptops.
+This Python implementation replaces the original Bash version with a lightweight, self-contained solution that eliminates unnecessary dependencies and parallelization overhead. The result is a portable tool that runs efficiently on any machine, from servers to standard laptops.
 
 ## Key Improvements
 
