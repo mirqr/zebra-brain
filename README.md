@@ -12,7 +12,7 @@ This Python implementation replaces the original Bash version with a lightweight
 ## Key Improvements
 
 
-- **Pure Python Implementation** – Replaced Bash scripts with Python for better readability, maintainability, and portability.  
-- **Simplified and Isolated Setup** - Single-command installation in an isolated Conda environment, avoiding software conflicts. **No Root** Access Required. **No proprietary dependencies** (e.g. MATLAB), replacing them with **equivalent Python code**.  
-- **Optimized Parallelization** – Identified **only the necessary parts** that require parallel execution, using Python subprocesses instead of Slurm.  
-- **Better Portability** – Runs on standard laptops to high-performance workstations
+- **Pure Python Implementation – Replaces Bash scripts with Python for improved readability, maintainability, and cross-platform compatibility.
+- **Streamlined Setup** – Single-command installation in an isolated Conda environment eliminates software conflicts. Requires no root access and no proprietary dependencies (MATLAB replaced with equivalent Python libraries).
+- **Targeted Parallelization** – Applies parallel execution only where needed, using Python subprocesses instead of Slurm for greater flexibility.
+- **Enhanced Portability** – Runs seamlessly from standard laptops to high-performance workstations.
