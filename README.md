@@ -16,7 +16,7 @@ This repository provides a standalone Python implementation that can be run on a
 - Streamlined and modularized setup using a Conda environment — no root access required
 - Eliminated unnecessary and proprietary dependencies (e.g., MATLAB) to simplify deployment
 - Optimized parallel execution by isolating performance-critical sections and leveraging Python’s subprocess module instead of relying on Slurm
-- Improved portability - runs seamlessly on standard laptops as well as high-performance workstations.
+- Improved portability - runs seamlessly on standard laptops as well as high-performance workstations
 
 
 For information, contact: 
