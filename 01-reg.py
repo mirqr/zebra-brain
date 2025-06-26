@@ -83,17 +83,18 @@ def process_file(file_path):
 
 if __name__ == "__main__":
 
-    
+    # INPUT
     experiment_folder = 'data/data_dyrka'
-    non_param_file = "aux/01-reg/nonlinearRegistration.param"
+    # 
 
+    non_param_file = "aux/01-reg/nonlinearRegistration.param"
     # Define paths
     STANDARD_REFERENCE = "aux/01-reg/standard_ref.nii.gz"
     STANDARD_RSP_REFERENCE = "aux/01-reg/standard_ref_rsp.nii.gz"
     DIS_ATLAS_MASK_FILE = "aux/01-reg/dis_atlas_mask.nii.gz"
 
     # Define folders
-    nrrd_folder = make_folder(f"{experiment_folder}/nrrd")
+    nrrd_folder = make_folder(f"{experiment_folder}/nrrd") # input nrrd files
     opt_folder = make_folder(f"{experiment_folder}/optfixed")
     xform_folder = make_folder(f"{experiment_folder}/xform")
     reg_folder = make_folder(f"{experiment_folder}/registered")
