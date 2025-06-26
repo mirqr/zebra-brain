@@ -12,10 +12,12 @@ This repository provides a standalone Python implementation that can be run on a
 
 ## Key Improvements
 
-- Replaced Bash scripts with Python for better readability, maintainability
-- Simplified and isolated setup in a Conda environment. No Root Required. Removed unnecessary (proprietary) dependencies (e.g., MATLAB)
-- Optimized parallelization by identifying only the necessary parts that require parallel execution, using Python subprocesses instead of Slurm
-- Improved portability - can run on standard laptops to high-performance workstations
+- Migrated from Bash to Python for improved readability and maintainability
+- Streamlined and modularized setup using a Conda environment — no root access required
+- Eliminated unnecessary and proprietary dependencies (e.g., MATLAB) to simplify deployment
+- Optimized parallel execution by isolating performance-critical sections and leveraging Python’s subprocess module instead of relying on Slurm
+- Improved portability - runs seamlessly on standard laptops as well as high-performance workstations.
+
 
 For information, contact: 
 - Mirko Nardi (Postdoctoral Researcher, Computer Science Dept., Scuola Normale Superiore - IIT-CNR) - mirko.nardi@sns.it 
