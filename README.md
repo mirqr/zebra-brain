@@ -1,18 +1,22 @@
 # **BREEZE-Mapping Pipeline: a Standalone Python Implementation**  
 
 ## **Overview**  
-This repository provides an improved and fully portable implementation of the **BREEZE-mapping pipeline** for whole-brain structural and activity analysis in larval zebrafish, based on:
+This repository provides an improved and fully portable implementation of the **BREEZE-mapping pipeline** for whole-brain structural and activity analysis in larval zebrafish, introduced in:
 
 **Jin, Neelakantan, et al.** (2023) – *Brain Registration and Evaluation for Zebrafish (BREEZE)-mapping: A pipeline for whole-brain structural and activity analyses.* [STAR Protocols, DOI: 10.1016/j.xpro.2023.102647](https://doi.org/10.1016/j.xpro.2023.102647)  
 
-The original pipeline assumes access to high-performance computing (HPC) infrastructure with Slurm workload management, requiring proprietary (MATLAB) or root-level permissions to install dependencies.
+The original pipeline is designed for HPC infrastructure with Slurm workload management and relies on root access and multiple external dependencies, including proprietary software.
 
-This Python implementation replaces the original Bash version with a lightweight, self-contained solution that eliminates unnecessary dependencies and parallelization overhead. The result is a portable tool that runs efficiently on any machine, from servers to standard laptops.
+This repository provides a standalone Python implementation that can be run on a wider range of machine with minimal setup requirements.
+
 
 ## Key Improvements
 
+- Replaced Bash scripts with Python for better readability, maintainability
+- Simplified and isolated setup in a Conda environment. No Root Required. Removed unnecessary (proprietary) dependencies (e.g., MATLAB)
+- Optimized parallelization by identifying only the necessary parts that require parallel execution, using Python subprocesses instead of Slurm
+- Improved portability - can run on standard laptops to high-performance workstations
 
-- **Pure Python Implementation** – Replaces Bash scripts with Python for improved readability, maintainability, and cross-platform compatibility.
-- **Streamlined Setup** – Single-command installation in an isolated Conda environment eliminates software conflicts. Requires no root access and no proprietary dependencies (MATLAB replaced with equivalent Python libraries).
-- **Targeted Parallelization** – Applies parallel execution only where needed, using Python subprocesses instead of Slurm for greater flexibility.
-- **Enhanced Portability** – Runs seamlessly from standard laptops to high-performance workstations.
+For information, contact: 
+- Mirko Nardi (Postdoctoral Researcher, Computer Science Dept., Scuola Normale Superiore - IIT-CNR) - mirko.nardi@sns.it 
+- Matteo DiGregorio (PhD candidate, Biology Dept., University of Pisa) - matteo.digregorio@unipi.it
