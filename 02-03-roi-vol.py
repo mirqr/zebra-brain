@@ -110,7 +110,7 @@ if __name__ == "__main__":
 
     # INPUT
     experiment_folder = 'data/data_dyrka'
-    #
+    # INPUT
 
     check_aux_files()
 
