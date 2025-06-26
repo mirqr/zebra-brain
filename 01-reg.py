@@ -1,6 +1,3 @@
-
-
-
 # ruff: noqa: F403 F405 F401 
 import os
 import glob
@@ -16,7 +13,7 @@ import matplotlib.pyplot as plt
 
 from utils_general import *
 from utils_reg import *
-from utils_reg_new import *
+
 
 # fslmaths needs this
 os.environ["FSLDIR"] = os.environ["CONDA_PREFIX"]
@@ -82,10 +79,10 @@ def process_file(file_path):
 
 
 if __name__ == "__main__":
-
+    
     # INPUT
     experiment_folder = 'data/data_dyrka'
-    # 
+    # INPUT
 
     non_param_file = "aux/01-reg/nonlinearRegistration.param"
     # Define paths
