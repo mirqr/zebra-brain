@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import nibabel as nib
 
-import vtk # alla fine non usato
+#import vtk # alla fine non usato
 import SimpleITK as sitk
 
 

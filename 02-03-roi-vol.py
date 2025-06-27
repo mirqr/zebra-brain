@@ -13,7 +13,7 @@ from multiprocessing import get_context # for macos
 
 from utils_general import *
 from utils_reg import *
-from utils_stat import *
+#from utils_stat import *
 
 
 def make_folder(folder):
