@@ -1,0 +1,24 @@
+{
+    "module": "nonlinearRegistration",
+    "params": {
+        "doreslice": false,
+        "norm": true,
+        "intscale": 1,
+        "numbins": 64,
+        "imagesmoothing": 1,
+        "metric": "CC",
+        "optimization": "ConjugateGradient",
+        "stepsize": 1,
+        "levels": 3,
+        "iterations": 10,
+        "resolution": 1.5,
+        "debug": true,
+        "steps": 1,
+        "linearmode": "Affine",
+        "cps": 20,
+        "append": true,
+        "cpsrate": 2,
+        "lambda": 0.001,
+        "useheader": true
+    }
+}
