@@ -22,3 +22,55 @@ This repository provides a standalone Python implementation that can be run on a
 For information, contact: 
 - Mirko Nardi (Postdoctoral Researcher, Computer Science Dept., Scuola Normale Superiore - IIT-CNR) - mirko.nardi@sns.it 
 - Matteo DiGregorio (PhD candidate, Biology Dept., University of Pisa) - matteo.digregorio@unipi.it
+
+
+# Installation
+
+## Prerequisites
+
+
+This pipeline has been tested on **Linux** systems.
+**Note**: The `afni` package is only available on **Linux** or **Windows Subsystem for Linux (WSL)**. 
+
+
+- [Conda](https://github.com/conda-forge/miniforge) Miniforge is recommended for a lightweight Conda installation.
+
+
+
+## Installation Steps
+
+1. Clone the repository and navigate into the project directory:
+
+   ```bash
+   git clone <your-repo-url>
+   cd zebra-brain
+   ```
+
+2. Initialize the Conda environment:
+
+   ```bash
+   source env.sh
+   ```
+
+This will create and activate an isolated environment named `zebra-env` with all the required dependencies. 
+
+## Configuration
+
+Before running the pipeline, configure the working directory:
+
+- Open each `.py` script and set the `experiment_folder` variable to the path where your input data is located.
+
+
+## Running the Pipeline
+
+To run individual steps of the pipeline, activate the environment and execute the relevant scripts:
+
+```bash
+conda activate zebra-env  # Activate the environment
+
+# Run the registration step
+python 01-reg.py  
+
+# Run the ROI volume step
+python 02-03-roi-vol.py  
+```
