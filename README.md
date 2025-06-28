@@ -28,9 +28,7 @@ For information, contact:
 
 This repository is designed to be run in a Conda environment, which allows for easy management of dependencies and isolation of the Python environment.
 
-This pipeline has been tested on **Linux**.
-
-Up to Step 4 (`04-zscore.py`), the pipeline can run on any platform with a properly installed Conda environment. However, from Step 5 onward, the pipeline requires a Linux-based system, as the `afni` package is only available on **Linux** or **Windows Subsystem for Linux (WSL)**.
+This pipeline has been tested on **Linux**. Steps 1-4 can run on any platform with a properly installed Conda environment. However, Steps 5+ require Linux (including Windows Subsystem for Linux (WSL)) due to the ``afni`` package dependency, which is Linux-exclusive.
 
 
 ## Prerequisites
@@ -40,16 +38,11 @@ Up to Step 4 (`04-zscore.py`), the pipeline can run on any platform with a prope
 
 ## Installation Steps
 
-1. Clone the repository and navigate into the project directory:
+1. Clone/download the repository
+2. Navigate into the project directory and initialize the Conda environment:
 
    ```bash
-   git clone git@github.com:mirqr/zebra-brain.git
    cd zebra-brain
-   ```
-
-2. Initialize the Conda environment:
-
-   ```bash
    source env.sh
    ```
 
