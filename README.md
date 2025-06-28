@@ -24,17 +24,18 @@ For information, contact:
 - Matteo DiGregorio (PhD candidate, Biology Dept., University of Pisa) - matteo.digregorio@unipi.it
 
 
-# Installation
+# Installation and Usage Instructions
+
+This repository is designed to be run in a Conda environment, which allows for easy management of dependencies and isolation of the Python environment.
+
+This pipeline has been tested on **Linux**.
+
+Up to Step 4 (`04-zscore.py`), the pipeline can run on any platform with a properly installed Conda environment. However, from Step 5 onward, the pipeline requires a Linux-based system, as the `afni` package is only available on **Linux** or **Windows Subsystem for Linux (WSL)**.
+
 
 ## Prerequisites
 
-
-This pipeline has been tested on **Linux** systems.
-**Note**: The `afni` package is only available on **Linux** or **Windows Subsystem for Linux (WSL)**. 
-
-
 - [Conda](https://github.com/conda-forge/miniforge) Miniforge is recommended for a lightweight Conda installation.
-
 
 
 ## Installation Steps
@@ -42,7 +43,7 @@ This pipeline has been tested on **Linux** systems.
 1. Clone the repository and navigate into the project directory:
 
    ```bash
-   git clone <your-repo-url>
+   git clone git@github.com:mirqr/zebra-brain.git
    cd zebra-brain
    ```
 
@@ -52,13 +53,21 @@ This pipeline has been tested on **Linux** systems.
    source env.sh
    ```
 
-This will create and activate an isolated environment named `zebra-env` with all the required dependencies. 
+This will create and activate an isolated environment named `zebra-env` with all the required dependencies, including a `nodejs` installation required for `BioImage Suite Web` tool.
 
-## Configuration
+## Experimental Configuration
+
+Each step of the pipeline expects an input folder containing the images to be processed.
+
+Following the structure of the original BREEZE-mapping pipeline, place the images for Step 1 (registration) into:
+
+```
+data/<your_experiment>/nrrd/
+```
 
 Before running the pipeline, configure the working directory:
 
-- Open each `.py` script and set the `experiment_folder` variable to the path where your input data is located.
+- Open each `.py` script and set the `experiment_folder` variable to the path of your experiment folder, e.g., `data/<your_experiment>`.
 
 
 ## Running the Pipeline
@@ -70,7 +79,12 @@ conda activate zebra-env  # Activate the environment
 
 # Run the registration step
 python 01-reg.py  
+```
 
+Once the registration step is complete, you can proceed with the next steps in the pipeline:
+
+```bash
 # Run the ROI volume step
 python 02-03-roi-vol.py  
 ```
+

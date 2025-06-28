@@ -1,7 +1,7 @@
 #!/bin/bash
 
-conda create -n zebra2 python=3.10 -y
-conda activate zebra2
+conda create -n zebra-env python=3.10 -y
+conda activate zebra-env
 conda install nodejs -y
 
 npm install -g biswebnode@1.3.0 mocha@11.1.0 
